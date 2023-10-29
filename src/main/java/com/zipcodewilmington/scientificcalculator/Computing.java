@@ -11,6 +11,7 @@ public class Computing {
         Operations operation = new Operations();
         FactorialFunction factorial = new FactorialFunction();
         double solution = 0;
+        double MemoryValue = 0;
         String display = String.valueOf(0);
         System.out.println("Booting up calculator...");
 
@@ -19,7 +20,8 @@ public class Computing {
                 "\n1. Clear Screen", "2. Add", "3. Subtract", "4. Multiply", "5. Division",
                 "6. Square", "7. Square Root", "8. Variable Exponential", "9. Inverse", "10. Invert",
                 "13. tan(", "14. Inverse sin(", "15. Inverse cos(", "16. tan(", "17. Log", "18. Inverse Logarithm",
-                "19. Natural Logarithm", "20. Inverse Natural Logarithm","21. Switch Mode", "22. Memory", "23. Off/Shut Down"
+                "19. Natural Logarithm", "20. Inverse Natural Logarithm","21. Switch Mode", "22. M+", "23. MC",
+                "24. MRC", "25. Factorial", "26. Off/Shut Down"
             };
         //looping through the array to list out the choices
 
@@ -111,7 +113,7 @@ public class Computing {
                         break;
                 }
 
-            }else if (userInput >= 11 && userInput <= 20) {
+            }else if (userInput >= 11 && userInput <= 25) {
 
                 switch (userInput) {
                     case 11:
@@ -156,36 +158,65 @@ public class Computing {
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s:", display);
                         break;
-                    /*case 17:
+                    case 17:
                         System.out.println("Log");
                         input1 = scanner.nextDouble();
-                        solution = scientific.log();
+                        solution = scientific.logarithmBase10(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s", display);
                         break;
                     case 18:
-                        System.out.println(Inverse Log);
+                        System.out.println("Inverse Log");
                         input1 = scanner.nextDouble();
-                        solution = scientific.invlog();
+                        solution = scientific.inverseLogarithmBase10(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s", display);
                         break;
                     case 19:
-                        System.out.println(Natural Log);
+                        System.out.println("Natural Log");
                         input1 = scanner.nextDouble();
-                        solution = scientific.natlog();
+                        solution = scientific.naturalLogarithm(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s", display);
                         break;
                     case 20:
-                        System.out.println(Inverse Natural Log);
+                        System.out.println("Inverse Natural Log");
                         input1 = scanner.nextDouble();
-                        solution = scientific.invnatlog();
+                        solution = scientific.inverseNaturalLogarithm(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s", display);
-                        break;*/
+                        break;
+                    case 21:
+                        System.out.println("Switch Mode");
+                        input1 = scanner.nextDouble();
+                        //solution = scientific.switchUnitsMode();
+                        display = String.valueOf(solution);
+                        System.out.printf("Solution %s", display);
+                        break;
+                    case 22:
+                        System.out.println("Add Memory");
+                        MemoryValue = 0;
+                        MemoryValue += solution;
+                        System.out.println(MemoryValue);
+                        break;
+                    case 23:
+                        System.out.println("Reset Memory");
+                        MemoryValue = 0;
+                        System.out.println(MemoryValue);
+                        break;
+                    case 24:
+                        System.out.println("Recall Memory");
+                        System.out.println(MemoryValue);
+                        break;
+                    case 25:
+                        System.out.println("Factorial Number");
+                        input1 = scanner.nextDouble();
+                        solution = factorial.factorial(input1);
+                        display = String.valueOf(solution);
+                        System.out.printf("Solution %s", display);
+
                 }
-            }else if (userInput == 21){
+            }else if (userInput == 26){
                 System.out.println("Turning off calculator...");
                 break;
             } else {
