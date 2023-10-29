@@ -9,7 +9,10 @@ public class Computing {
         Scanner scanner = new Scanner(System.in);
 
         //ScinentificFeatures scientific = new ScientificFeatures;
-        //Operation operation = new Operation();
+        Operations operation = new Operations();
+        double solution = 0;
+        double input1 = scanner.nextDouble();
+        double input2 = scanner.nextDouble();
 
         while(true) {
             System.out.println("Welcome to our Calculator");
@@ -22,6 +25,7 @@ public class Computing {
                     "17. Log", "18. Inverse Logarithm", "19. Natural Logarithm", "20. Inverse Natural Logarithm",
                     "21. Off/Shut Down"
             };
+
             System.out.println("\nPlease enter a number");
             String userInput = scanner.nextLine();
             //looping through the array to list out the choices
@@ -33,6 +37,31 @@ public class Computing {
 //                    System.exit(0);
 
             switch (userInput) {
+                case "1":
+                    display = String.valueOf(0);
+                    System.out.printf("Display: %s", display);
+                    break;
+                case "2":
+                    solution = operation.add(input1, input2);
+                    display = String.valueOf(solution);
+                    System.out.printf("Display: %s", display);
+                    break;
+                case "3":
+                    solution = operation.subtract(input1, input2);
+                    display = String.valueOf(solution);
+                    System.out.printf("Display: %s", display);
+                    break;
+                case "4":
+                    solution = operation.multiply(input1, input2);
+                    display = String.valueOf(solution);
+                    System.out.printf("Display: %s", display);
+                    break;
+                case "5":
+                    solution = operation.divide(input1, input2);
+                    display = String.valueOf(solution);
+                    System.out.printf("Display: %s", display);
+                    break;
+
 
             }
         }

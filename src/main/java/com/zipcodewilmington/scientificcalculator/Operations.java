@@ -1,6 +1,8 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class Operations {
+    public static void input1(double int1) {System.out.println(int1);}
+    public static void input2(double int2) {System.out.println(int2);}
     public double add(double int1, double int2) {
         return int1 + int2;
     }
