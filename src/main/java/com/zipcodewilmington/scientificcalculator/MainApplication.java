@@ -23,6 +23,7 @@ public class MainApplication {
         Console.println("The user input %s as a string", s);
         Console.println("The user input %s as an integer", i);
         Console.println("The user input %s as a d", d);
+
 */
         //ignore below
         DisplayClass.clearDisplay();
@@ -33,5 +34,7 @@ public class MainApplication {
         System.out.println(num1);
         System.out.println(num2);
         System.out.println(operator);
+
     }
+
 }
