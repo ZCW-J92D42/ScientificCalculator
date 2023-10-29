@@ -9,7 +9,10 @@ public class Operations {
         return int1 + int2;
     }
     //method used for subtraction
-    public double subtract(double int1, double int2) {return int1 - int2;}
+    public double subtract(double int1, double int2) {
+        System.out.println("Subtract\n");
+        return int1 - int2;
+    }
     //method used for multiplication
     public double multiply(double int1, double int2) {
         return int1 * int2;
@@ -17,9 +20,6 @@ public class Operations {
     //method used for division
 
     public double divide(double int1, double int2) {
-        if (int1 / int2 == 0 / 0) {
-            System.out.println("ERROR! DIVISION BY ZERO");
-        }
         return int1 / int2;
     }
 
