@@ -36,4 +36,28 @@ public class ScientificFeatures {
     public void switchUnitsMode() {
         isDegrees = !isDegrees;
     }
+
+    public double inverseSine(double entry) {
+        if (isDegrees) {
+            return Math.toDegrees(Math.asin(entry));
+        } else {
+            return Math.asin(entry);
+        }
+    }
+
+    public double inverseCosine(double entry) {
+        if (isDegrees) {
+            return Math.toDegrees(Math.acos(entry));
+        } else {
+            return Math.acos(entry);
+        }
+    }
+
+    public double inversetangent(double entry) {
+        if (isDegrees) {
+            return Math.toDegrees(Math.atan(entry));
+        } else {
+            return Math.atan(entry);
+        }
+    }
 }
