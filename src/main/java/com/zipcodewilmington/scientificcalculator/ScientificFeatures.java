@@ -49,12 +49,18 @@ public class ScientificFeatures {
         return Math.exp(entry);
     }
 
+
+    public double inverseTangent(double entry) {
+        if (isDegrees) {
+            return Math.toDegrees(Math.atan(entry));
+        }  
     // Unit switching
     public void switchUnitsMode(String mode) {
         if (mode.equalsIgnoreCase("Degrees")) {
             isDegrees = true;
         } else if (mode.equalsIgnoreCase("Radians")) {
             isDegrees = false;
+          
         } else {
             throw new IllegalArgumentException("Invalid mode. Supported modes are 'Degrees' and 'Radians'.");
         }
