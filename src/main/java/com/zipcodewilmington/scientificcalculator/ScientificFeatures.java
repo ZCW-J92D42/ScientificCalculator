@@ -53,7 +53,7 @@ public class ScientificFeatures {
         }
     }
 
-    public double inversetangent(double entry) {
+    public double inverseTangent(double entry) {
         if (isDegrees) {
             return Math.toDegrees(Math.atan(entry));
         } else {
