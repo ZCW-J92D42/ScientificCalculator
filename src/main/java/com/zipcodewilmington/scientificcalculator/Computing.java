@@ -9,7 +9,7 @@ public class Computing {
         Scanner scanner = new Scanner(System.in);
         double input1 = scanner.nextDouble();
         double input2 = scanner.nextDouble();
-        //ScinentificFeatures scientific = new ScientificFeatures;
+        ScientificFeatures scientific = new ScientificFeatures();
         Operations operation = new Operations();
         double solution = 0;
         System.out.println("Booting up calculator...");
@@ -20,10 +20,7 @@ public class Computing {
             String[] choiceArray = {
                     "1. Clear Screen", "2. Add", "3. Subtract", "4. Multiply", "5. Division",
                     "6. Square", "7. Square Root", "8. Variable Exponential", "9. Inverse", "10. Invert\n",
-                    "Switch - Switch to scientific calculations",
-                    "11. sin(", "12. cos(", "13. tan(", "14. Inverse sin(", "15. Inverse cos(", "16. tan(",
-                    "17. Log", "18. Inverse Logarithm", "19. Natural Logarithm", "20. Inverse Natural Logarithm",
-                    "21. Off/Shut Down"
+                    "11. Switch to scientific calculations", "12. Off/Shut Down"
             };
             //prompt user to enter a number
             System.out.println("\nPlease enter a number or enter \"switch\" to change to scientific functions");
@@ -33,10 +30,6 @@ public class Computing {
             }
             //saves user's number in the variable userInput
             int userInput = scanner.nextInt();
-
-//                if (userInput.equals("21")) {
-//                    System.out.println("Ok, calculator will now turn off.");
-//                    System.exit(0);
             //starting switch case statement that will run conditions based upon user's choice
             if (userInput > 0 && userInput <= 10){
                 switch (userInput) {
@@ -93,46 +86,53 @@ public class Computing {
                         break;
                 }
 
-            }else if (userInput >= 11 && userInput <= 20) {
-                System.out.println("You have switched to the Scientific Functions. Your input is for:\n");
+            }else if (userInput == 11) {
+                System.out.println("You have switched to the Scientific Functions. Choose an selection:\n");
+                String[] scienceArray = {
+                        "1. sin(", "2. cos(", "3. tan(", "4. Inverse sin(", "5. Inverse cos(", "6. tan(",
+                        "7. Log", "8. Inverse Logarithm", "9. Natural Logarithm", "10. Inverse Natural Logarithm",
+                        "11. Off/Shut Down", "12. Switch back to main operations"
+                };
+                for (int j = 0; j < scienceArray.length; j++) {
+                    System.out.println(choiceArray[j]);
                 switch (userInput) {
-                    case 11:
-                        solution = scienfic.sine();
+                    case 1:
+                        solution = scientific.sine(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 12:
-                        solution = scienfic.cosine();
+                    case 2:
+                        solution = scientific.cosine(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 13:
-                        solution = scienfic.tangent();
+                    case 3:
+                        solution = scientific.tangent(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 14:
-                        solution = scienfic.invsin();
+                    case 4:
+                        solution = scientific.invsin();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 15:
+                    case 5:
                         solution = scienfic.invcosine();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 16:
+                    case 6:
                         solution = scienfic.invtangent();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 17:
+                    case 7:
                         solution = scienfic.log();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 18:
+                    case 8:
                         solution = scienfic.invlog();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 19:
+                    case 9:
                         solution = scienfic.natlog();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
-                    case 20:
+                    case 10:
                         solution = scienfic.invnatlog();
                         display = String.valueOf(solution);
                         System.out.printf("Scientific Operations: %s", display);
