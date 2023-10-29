@@ -49,11 +49,6 @@ public class ScientificFeatures {
         return Math.exp(entry);
     }
 
-
-    public double inverseTangent(double entry) {
-        if (isDegrees) {
-            return Math.toDegrees(Math.atan(entry));
-        }  
     // Unit switching
     public void switchUnitsMode(String mode) {
         if (mode.equalsIgnoreCase("Degrees")) {
