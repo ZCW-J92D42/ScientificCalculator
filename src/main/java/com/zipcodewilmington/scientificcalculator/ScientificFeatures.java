@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class ScientificFeatures {
     private boolean isDegrees = true;
+    private String displayMode = "Decimal"; // The default display mode is Decimal
     private FactorialFunction factorialFunction = new FactorialFunction();
 
     // Constructors and getter methods
@@ -60,4 +61,34 @@ public class ScientificFeatures {
             throw new IllegalArgumentException("Invalid mode. Supported modes are 'Degrees' and 'Radians'.");
         }
     }
+
+    // Display Mode Switching
+    public void switchDisplayMode(String mode) {
+        if (mode.equalsIgnoreCase("Binary") || mode.equalsIgnoreCase("Octal") || mode.equalsIgnoreCase("Decimal") || mode.equalsIgnoreCase("Hexadecimal")) {
+            displayMode = mode;
+        } else {
+            throw new IllegalArgumentException("Invalid display mode. Supported modes are: binary, octal, decimal, hexadecimal");
+        }
+    }
+
+    public String getDisplayMode() {
+        return displayMode;
+    }
+
+    // Method to apply the display mode to received input
+    private double applyDisplayMode (double entry) {
+        switch (displayMode) {
+            case "Binary":
+                return Double.parseDouble(Integer.toBinaryString((int) entry));
+            case "Octal":
+                return Double.parseDouble(Integer.toOctalString((int) entry));
+            case "Decimal":
+                return Double.parseDouble(Integer.toBinaryString((int) entry));
+            case "Hexadecimal":
+                return Double.parseDouble(Integer.toHexString((int) entry));
+        }
+
+        return entry;
+    }
+
 }
