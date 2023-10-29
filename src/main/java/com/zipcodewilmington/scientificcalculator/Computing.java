@@ -35,7 +35,7 @@ public class Computing {
 //                if (userInput.equals("21")) {
 //                    System.out.println("Ok, calculator will now turn off.");
 //                    System.exit(0);
-
+            //starting switch case statement that will run conditions based upon user's choice
             switch (userInput) {
                 case "1":
                     display = String.valueOf(0);
@@ -60,8 +60,18 @@ public class Computing {
                     solution = operation.divide(input1, input2);
                     display = String.valueOf(solution);
                     System.out.printf("Display: %s", display);
-                    break;
 
+                    break;
+                case "6":
+                    solution = operation.square(input1);
+                    display = String.valueOf(solution);
+                    System.out.printf("Display: %s", display);
+                    break;
+                case "7":
+                    solution = operation.squareRoot(input1);
+                    display = String.valueOf(solution);
+                    System.out.printf("Display: %s", display);
+                    break;
 
             }
         }
