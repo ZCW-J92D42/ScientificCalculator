@@ -139,7 +139,7 @@ public class Computing {
 
                 }
             } else if (userInput == 21){
-                System.out.println("Ok, the calculator is not turning off");
+                System.out.println("Turning off calculator...");
                 System.exit(0);
             } else {
                 System.out.println("\nThat is not an correct selection\nPlease choose from the selection list");
