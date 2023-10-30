@@ -1,0 +1,10 @@
+1. Be on time for meetings.
+    1. More than 30 mins late and team can’t get ahold of you, they may be forced to reach out.
+2. Share multiple contact methods with each other.
+3. Notify teammates which tasks/work you are picking up.
+    1. Notify teammates when being away or signing off for the day or more than an hour.  If no set meetings, tell them expected time your back on.
+4. Create tests for your class/methods.
+5. Notify teammates when finished with a task.
+6. Communicate commits & pushes, ask for help if unsure.
+    1. Commits to local, pushes to local, then merge request with dev branch on org fork.
+7. Try for 15-30 mins, then ask for help and explain what you were trying.
