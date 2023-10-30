@@ -18,8 +18,8 @@ public class Computing {
         // created an array of choices for the user
         String[] choiceArray = {
                 "\n1. Clear Screen", "2. Add", "3. Subtract", "4. Multiply", "5. Division",
-                "6. Square", "7. Square Root", "8. Variable Exponential", "9. Inverse", "10. Invert",
-                "13. tan(", "14. Inverse sin(", "15. Inverse cos(", "16. tan(", "17. Log", "18. Inverse Logarithm",
+                "6. Square", "7. Square Root", "8. Variable Exponential", "9. Inverse", "10. Invert", "11. sin(",
+                "12. cos(", "13. tan(", "14. Inverse sin(", "15. Inverse cos(", "16. Inverse tan(", "17. Log", "18. Inverse Logarithm",
                 "19. Natural Logarithm", "20. Inverse Natural Logarithm","21. Switch Mode", "22. M+", "23. MC",
                 "24. MRC", "25. Factorial", "26. Off/Shut Down"
             };
