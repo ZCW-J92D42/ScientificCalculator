@@ -77,7 +77,6 @@ public class Computing {
                     case 6:
                         System.out.println("Square");
                         input1 = scanner.nextDouble();
-                        input2 = scanner.nextDouble();
                         solution = operation.square(input1);
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s:", display);
@@ -187,14 +186,23 @@ public class Computing {
                         System.out.printf("Solution %s", display);
                         break;
                     case 21:
-                        System.out.println("Switch Mode");
+                        System.out.println("Switched Mode");
+                        System.out.println("Enter number for selection. Then enter value.");
+                        String[] binaryArray = {
+                                "1. Binary", "2. Octal",
+                                "3. Decimal", "4. Hexadecimal"
+                        };
+                        for (int j = 0; j < binaryArray.length; j++) {
+                            System.out.println(binaryArray[j]);
+                        }
                         input1 = scanner.nextDouble();
-                        //solution = scientific.switchUnitsMode();
+                        double input2 = scanner.nextDouble();
+                        solution = scientific.applyDisplayMode(input1, input2);
                         display = String.valueOf(solution);
                         System.out.printf("Solution %s", display);
                         break;
                     case 22:
-                        System.out.println("Add Memory");
+                        System.out.println("Memory Added");
                         MemoryValue = 0;
                         MemoryValue += solution;
                         System.out.println(MemoryValue);
