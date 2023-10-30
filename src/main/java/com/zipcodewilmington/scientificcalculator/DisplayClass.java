@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.io.IOException;
+
 public class DisplayClass  {
     //trying to convert input string into ints/doubles/ and chars
    /* public static Integer stringToInt(String prompt){
@@ -52,6 +54,7 @@ public class DisplayClass  {
     }
     //clears the console display
     public static void clearDisplay(){
+        System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 }
