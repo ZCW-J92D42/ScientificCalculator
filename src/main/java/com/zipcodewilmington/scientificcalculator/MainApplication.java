@@ -8,32 +8,17 @@ public class MainApplication {
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
         Console.println("0");
-      /*  String s = DisplayClass.integerExtract("Enter a string");
-
+      /*
 
         // User needs to enter the operations they want to perform.   SQRT means to do square root.
-        String s = Console.getStringInput("Enter a string");
-
-        //
-        Integer i = Console.getIntegerInput("Enter an integer");
-
-        //
-        Double d = Console.getDoubleInput("Enter a double.");
-
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as an integer", i);
-        Console.println("The user input %s as a d", d);
-
 */
         //ignore below
         DisplayClass.clearDisplay();
         String s = Console.getStringInput("Enter your math problem");
-        //Double num1 = DisplayClass.integerExtractor(s)[0];
-        //Double num2 = DisplayClass.integerExtractor(s)[1];
-        Double[] num = DisplayClass.integerExtractor(s);
         String operator = DisplayClass.operatorExtractor(s);
-        //System.out.println(num1);
-        //System.out.println(num2);
+        Double[] num = DisplayClass.integerExtractor(s);
+        //System.out.println(num[0]);
+        //System.out.println(num[1]);
         //System.out.println(operator);
 
         Calculator calculator = new Calculator();
@@ -68,7 +53,6 @@ public class MainApplication {
                 System.out.println(calculator.exponentiation(num[0], num[1]));
                 break;
         }
-
     }
 
 }
