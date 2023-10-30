@@ -27,39 +27,39 @@ public class ScientificCalculator extends Calculator{
     // base 10 log
     public double log10(double userInput){
         if (userInput <= 0){
-            errorMessage = "Undefined";
+            String errorMessage = "Undefined";
             throw new ArithmeticException(errorMessage);
         }
-        currentValue = Math.log10(userInput);
+        double currentValue = Math.log10(userInput);
         return currentValue;
     }
     //inverse Log
     public double inverseLog(double userInput){
-        currentValue = Math.pow(10, userInput);
+        double currentValue = Math.pow(10, userInput);
         return currentValue;
     }
     //natural log
     public double naturalLog(double userInput){
-        currentValue = Math.log(userInput);
+        double currentValue = Math.log(userInput);
         return currentValue;
     }
     //inverse natural log
     public double inverseNaturalLog(double userInput){
-        currentValue = Math.pow(Math.E, userInput);
+        double currentValue = Math.pow(Math.E, userInput);
         return currentValue;
     }
 
     //factorial
     public double factorial(double userInput){
         if (userInput < 0){
-            errorMessage = "Undefined";
+            String errorMessage = "Undefined";
             throw new ArithmeticException(errorMessage);
         } else {
             double result = 1;
             for (; userInput > 0; userInput --){
                 result *= userInput;
             }
-            currentValue = result;
+            double currentValue = result;
             return currentValue;
         }
 
@@ -95,9 +95,10 @@ public class ScientificCalculator extends Calculator{
     public void setTrigUnitMode(String mode){
         String result = trigFunctions.setUnitMode(mode);
         if ("Invalid input mode".equals(result)) {
-            errorMessage = result;
+           String errorMessage = result;
             // Handle error as needed
         } else {
+            return;
             // Do something with the result, like displaying it to the user
         }
     }

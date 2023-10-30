@@ -6,7 +6,7 @@ public class TrigFunctions {
     public TrigFunctions(){
         this.unitMode = "Degrees"; //default mode is degrees
     }
-    public void setUnitMode(String mode){
+    public String setUnitMode(String mode){
         if (mode.equals("Degrees") || mode.equals("Radians")){
             this.unitMode = mode;
             return String.format("Set to %s mode", mode);
@@ -15,7 +15,7 @@ public class TrigFunctions {
         }
     }
     public void switchUnitMode(){
-        if(this.unitMode.equals("Degrees"){
+        if(this.unitMode.equals("Degrees")){
             this.unitMode = "Radians";
         } else if (this.unitMode.equals("Radians")) {
             this.unitMode = "Degrees";
@@ -54,7 +54,7 @@ public class TrigFunctions {
         if (this.unitMode.equals("Degrees")) {
             currentValue = Math.tan(Math.toRadians(userInput));
         } else {
-            currentValue = Math.tan(userInput)
+            currentValue = Math.tan(userInput);
         }
         return currentValue;
     }
@@ -76,7 +76,7 @@ public class TrigFunctions {
         }
         return currentValue;
     }
-}
+
     //Inverse Tangent
     public double inverseTangent(double userInput){ //change userInput to givenNumber globally
         double currentValue = Math.atan(userInput);
