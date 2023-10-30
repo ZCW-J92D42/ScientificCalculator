@@ -56,11 +56,13 @@ public class ScientificFeatures {
             isDegrees = true;
         } else if (mode.equalsIgnoreCase("Radians")) {
             isDegrees = false;
-          
+
         } else {
             throw new IllegalArgumentException("Invalid mode. Supported modes are 'Degrees' and 'Radians'.");
         }
     }
+
+    
 
     // Method to apply the display mode to received input
     public double applyDisplayMode (double entry, double entry2) {
@@ -71,6 +73,7 @@ public class ScientificFeatures {
             System.out.println("Octal");
             return Double.parseDouble(Integer.toOctalString((int) entry2));
         } else if (entry == 3){
+
             System.out.println("Decimal");
             return Double.parseDouble(Integer.toBinaryString((int) entry2));
         } else if (entry == 4) {
@@ -80,5 +83,4 @@ public class ScientificFeatures {
 
         return entry2;
     }
-
 }
