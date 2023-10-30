@@ -21,36 +21,71 @@ public class MainApplication {
         //System.out.println(num[1]);
         //System.out.println(operator);
 
-        Calculator calculator = new Calculator();
         //determines which operators to use
         switch(operator){
             case "+":
-                System.out.println(calculator.addNumbers(num[0], num[1]));
+                System.out.println(Calculator.addNumbers(num[0], num[1]));
                 break;
             case "-":
-                System.out.println(calculator.subtractNumbers(num[0], num[1]));
+                System.out.println(Calculator.subtractNumbers(num[0], num[1]));
                 break;
             case "*":
-                System.out.println(calculator.multiplyNumbers(num[0], num[1]));
+                System.out.println(Calculator.multiplyNumbers(num[0], num[1]));
                 break;
             case "/":
                 if(num[1] == 0.0){
                     System.out.println("ERR");
                 }else{
-                System.out.println(calculator.divideNumbers(num[0], num[1]));
+                System.out.println(Calculator.divideNumbers(num[0], num[1]));
                 }
                 break;
             case "sq":
-                System.out.println(calculator.square(num[0]));
+                System.out.println(Calculator.square(num[0]));
                 break;
             case "sqrt":
-                System.out.println(calculator.squareRoot(num[0]));
+                System.out.println(Calculator.squareRoot(num[0]));
                 break;
             case "inv":
-                System.out.println(calculator.inverse(num[0]));
+                System.out.println(Calculator.inverse(num[0]));
                 break;
             case "pow":
-                System.out.println(calculator.exponentiation(num[0], num[1]));
+                System.out.println(Calculator.exponentiation(num[0], num[1]));
+                break;
+           /* case "sin":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "cos":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "tan":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "insin":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "incos":
+                System.out.println(Calculator.exponentiation(num[0];
+                break;
+            case "intan":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "Log":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "inLog":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "Ln":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "e^x":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+            case "!":
+                System.out.println(Calculator.exponentiation(num[0]);
+                break;
+                */
+            case "quit":
                 break;
         }
     }
