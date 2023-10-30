@@ -62,21 +62,25 @@ public class ScientificFeatures {
         }
     }
 
+    
+
     // Method to apply the display mode to received input
-    public double applyDisplayMode(double entry, double entry2) {
+    public double applyDisplayMode (double entry, double entry2) {
         if (entry == 1) {
             System.out.println("Binary");
             return Double.parseDouble(Integer.toBinaryString((int) entry2));
-        } else if (entry == 2) {
+        } else if(entry == 2) {
             System.out.println("Octal");
             return Double.parseDouble(Integer.toOctalString((int) entry2));
-        } else if (entry == 3) {
+        } else if (entry == 3){
+
             System.out.println("Decimal");
             return Double.parseDouble(Integer.toBinaryString((int) entry2));
         } else if (entry == 4) {
             System.out.println("Hexadecimal");
             return Double.parseDouble(Integer.toHexString((int) entry2));
         }
+
         return entry2;
     }
 }
