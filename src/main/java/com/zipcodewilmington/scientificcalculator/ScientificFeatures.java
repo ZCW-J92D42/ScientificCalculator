@@ -62,33 +62,23 @@ public class ScientificFeatures {
         }
     }
 
-    // Display Mode Switching
-    public void switchDisplayMode(String mode) {
-        if (mode.equalsIgnoreCase("Binary") || mode.equalsIgnoreCase("Octal") || mode.equalsIgnoreCase("Decimal") || mode.equalsIgnoreCase("Hexadecimal")) {
-            displayMode = mode;
-        } else {
-            throw new IllegalArgumentException("Invalid display mode. Supported modes are: binary, octal, decimal, hexadecimal");
-        }
-    }
-
-    public String getDisplayMode() {
-        return displayMode;
-    }
-
     // Method to apply the display mode to received input
-    private double applyDisplayMode (double entry) {
-        switch (displayMode) {
-            case "Binary":
-                return Double.parseDouble(Integer.toBinaryString((int) entry));
-            case "Octal":
-                return Double.parseDouble(Integer.toOctalString((int) entry));
-            case "Decimal":
-                return Double.parseDouble(Integer.toBinaryString((int) entry));
-            case "Hexadecimal":
-                return Double.parseDouble(Integer.toHexString((int) entry));
+    public double applyDisplayMode (double entry, double entry2) {
+        if (entry == 1) {
+            System.out.println("Binary");
+            return Double.parseDouble(Integer.toBinaryString((int) entry2));
+        } else if(entry == 2) {
+            System.out.println("Octal");
+            return Double.parseDouble(Integer.toOctalString((int) entry2));
+        } else if (entry == 3){
+            System.out.println("Decimal");
+            return Double.parseDouble(Integer.toBinaryString((int) entry2));
+        } else if (entry == 4) {
+            System.out.println("Hexadecimal");
+            return Double.parseDouble(Integer.toHexString((int) entry2));
         }
 
-        return entry;
+        return entry2;
     }
 
 }
