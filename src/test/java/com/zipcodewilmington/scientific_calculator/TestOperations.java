@@ -62,7 +62,7 @@ public class TestOperations {
         double rightResult = 2;
         double result = testOperations.squareRoot(int1);
 
-        Assert.assertEquals((rightResult, result, 0.01));
+        Assert.assertEquals((rightResult), result, 0.01);
 
     }
 }
