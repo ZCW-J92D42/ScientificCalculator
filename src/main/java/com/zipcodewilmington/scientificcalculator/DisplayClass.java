@@ -26,7 +26,7 @@ public class DisplayClass  {
         String intExtract = w;
         intExtract = intExtract.replaceAll("\\D", " ");
         //split string
-        String[] intExtractArr = intExtract.split("\\s+", 2);
+        String[] intExtractArr = intExtract.split("\\s+");
         //if else so the user can enter 1 or 2 numbers
         if (intExtractArr.length > 1) {
             //converts string arr values into ints
